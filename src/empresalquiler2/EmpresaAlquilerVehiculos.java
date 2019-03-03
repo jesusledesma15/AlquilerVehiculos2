@@ -48,8 +48,13 @@ public class EmpresaAlquilerVehiculos {
     }
 
     public void registrarCliente(Cliente nuevo) {
-        this.listaCliente.set(this.totalClientes, nuevo);
+        this.listaCliente.add(this.totalClientes, nuevo);
         this.totalClientes++;
+    }
+    
+    public void registrarVehiculo(Vehiculo nuevo) {
+        this.listaVehiculo.add(this.totalVehiculos, nuevo);
+        this.totalVehiculos++;
     }
     
     public String getCif() {
