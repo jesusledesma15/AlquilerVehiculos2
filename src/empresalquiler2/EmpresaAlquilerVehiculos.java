@@ -47,6 +47,11 @@ public class EmpresaAlquilerVehiculos {
         this.listaAlquiler = new ArrayList<>();  //Apuntan a null
     }
 
+    public void registrarCliente(Cliente nuevo) {
+        this.listaCliente.set(this.totalClientes, nuevo);
+        this.totalClientes++;
+    }
+    
     public String getCif() {
         return cif;
     }
