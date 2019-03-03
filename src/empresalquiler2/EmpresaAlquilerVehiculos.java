@@ -51,19 +51,26 @@ public class EmpresaAlquilerVehiculos {
         this.listaCliente.add(this.totalClientes, nuevo);
         this.totalClientes++;
     }
-    
+
     public void registrarVehiculo(Vehiculo nuevo) {
         this.listaVehiculo.add(this.totalVehiculos, nuevo);
         this.totalVehiculos++;
     }
-    
-        public void imprimirClientes() {
+
+    public void imprimirClientes() {
         System.out.println("NIF cliente\tNombre\n");
         for (int i = 0; i < this.totalClientes; i++) {
             System.out.println(listaCliente.get(i).toString());
         }
     }
-    
+
+    public void imprimirVehiculos() {
+        System.out.println("Matricula\tModelo\tColor\tImporte\tDisponible\n");
+        for (int i = 0; i < this.totalVehiculos; i++) {
+            System.out.println(listaVehiculo.get(i).toString());
+        }
+    }
+
     public String getCif() {
         return cif;
     }
@@ -140,7 +147,5 @@ public class EmpresaAlquilerVehiculos {
     public String toString() {
         return "EmpresaAlquilerVehiculos{" + "cif=" + cif + ", nombre=" + nombre + ", paginaweb=" + paginaweb + ", totalClientes=" + totalClientes + ", listaCliente=" + listaCliente + ", totalVehiculos=" + totalVehiculos + ", listaVehiculo=" + listaVehiculo + ", totalAlquileres=" + totalAlquileres + ", listaAlquiler=" + listaAlquiler + '}';
     }
-
-
 
 }
