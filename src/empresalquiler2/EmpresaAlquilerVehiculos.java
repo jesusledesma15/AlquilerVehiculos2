@@ -71,6 +71,15 @@ public class EmpresaAlquilerVehiculos {
         }
     }
 
+    private Cliente getCliente(String nif) {
+        for (int i = 0; i < this.getTotalClientes(); i++) {
+            if (this.listaCliente.get(i).getNif().equals(nif)) {
+                return this.listaCliente.get(i);
+            }
+        }
+        return null;
+    }
+
     public String getCif() {
         return cif;
     }
