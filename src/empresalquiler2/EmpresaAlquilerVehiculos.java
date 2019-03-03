@@ -57,6 +57,13 @@ public class EmpresaAlquilerVehiculos {
         this.totalVehiculos++;
     }
     
+        public void imprimirClientes() {
+        System.out.println("NIF cliente\tNombre\n");
+        for (int i = 0; i < this.totalClientes; i++) {
+            System.out.println(listaCliente.get(i).toString());
+        }
+    }
+    
     public String getCif() {
         return cif;
     }
