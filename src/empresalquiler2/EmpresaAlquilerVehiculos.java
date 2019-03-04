@@ -185,6 +185,26 @@ public class EmpresaAlquilerVehiculos {
         return -1;
 
      }
+    
+    public int binarySearchCliente(String cliente) {
+        int mitad;
+        int izquierda = 0;
+        int derecha = listaCliente.size() - 1;
+        int valor = 0;
+        while ((izquierda <= derecha)) {
+            mitad = (izquierda + derecha) / 2;
+            valor = listaCliente.get(mitad).getNif().compareTo(cliente);
+            if (valor == 0) {
+                return mitad;
+            } else if (valor < 0) {
+                izquierda = mitad + 1;; //buscar en el trozo izquierdo
+            } else {
+                derecha = mitad - 1; // buscar en el trozo derecho
+            }
+        }
+        return -1;
+
+     }
 
     public String getCif() {
         return cif;
