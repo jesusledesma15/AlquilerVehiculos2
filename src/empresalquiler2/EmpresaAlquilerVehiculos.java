@@ -164,6 +164,27 @@ public class EmpresaAlquilerVehiculos {
             }
         }
     }
+    
+    //Buscqueda binaria Vehiculo
+    public int binarySearchVehiculo(String matricula) {
+        int mitad;
+        int izquierda = 0;
+        int derecha = listaVehiculo.size() - 1;
+        int valor = 0;
+        while ((izquierda <= derecha)) {
+            mitad = (izquierda + derecha) / 2;
+            valor = listaVehiculo.get(mitad).getMatricula().compareTo(matricula);
+            if (valor == 0) {
+                return mitad;
+            } else if (valor < 0) {
+                izquierda = mitad + 1;; //buscar en el trozo izquierdo
+            } else {
+                derecha = mitad - 1; // buscar en el trozo derecho
+            }
+        }
+        return -1;
+
+     }
 
     public String getCif() {
         return cif;
