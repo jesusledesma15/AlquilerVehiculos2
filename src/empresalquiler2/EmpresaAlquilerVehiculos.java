@@ -133,6 +133,22 @@ public class EmpresaAlquilerVehiculos {
           }
     }
     
+    //Hacer burbuja para Vehiculos
+    public void burbujaVehiculos() {
+        int aux;
+        Vehiculo temp;
+        for (int i = 0; i < listaVehiculo.size() - 1; i++) {
+            for (int j = i + 1; j < listaVehiculo.size(); j++) {
+                aux = listaVehiculo.get(i).getMatricula().compareTo(listaVehiculo.get(j).getMatricula());
+                if (aux > 0) {
+                    temp = listaVehiculo.get(i);
+                    listaVehiculo.set(i, listaVehiculo.get(j));
+                    listaVehiculo.set(j, temp);
+                }
+            }
+         }
+    }
+    
     public String getCif() {
         return cif;
     }
