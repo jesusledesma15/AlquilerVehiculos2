@@ -236,7 +236,7 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "[VEHÍCULO]" + "\n Matrícula: " + matricula + "\n Marca: " + marca + "\n Modelo: " + modelo + "\n Color: " + color + "\n Tarifa: " + tarifa + "\n Disponible: " + disponible;
+        return "Vehiculo{" + "matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + ", tarifa=" + tarifa + ", disponible=" + disponible + '}';
     }
 
 }
