@@ -122,7 +122,8 @@ public class EmpresaAlquilerVehiculos {
 
             listaVehiculo.add(Vehiculo.generarVehiculoRandom());
             System.out.println(listaVehiculo.get(i));
-        }
+            totalVehiculos++;
+        }        
     }
 
     public void rellenarArrayCliente() {
@@ -130,7 +131,8 @@ public class EmpresaAlquilerVehiculos {
 
             listaCliente.add(Cliente.generarClienteAleatorio());
             System.out.println(listaCliente.get(i));
-        }
+            totalClientes++;
+        }        
     }
 
     //Hacer burbuja para Vehiculos
