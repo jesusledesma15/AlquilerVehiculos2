@@ -102,12 +102,12 @@ public class EmpresaAlquilerVehiculos {
     public void alquilarVehiculo(String matricula, String nif, int dias) {
         Cliente cliente = getCliente(nif);
         Vehiculo vehiculo = getVehiculo(matricula);
-    // busca el cliente con el NIF dado en el array
-    // clientes y el vehículo con la matrícula dada en el
-    // array vehiculos, si el vehículo está disponible se
-    // alquila con la fecha actual, que se obtiene
-    // ejecutando los métodos diaHoy(), mesHoy() y
-    // añoHoy(), cuya declaración no se incluye
+        // busca el cliente con el NIF dado en el array
+        // clientes y el vehículo con la matrícula dada en el
+        // array vehiculos, si el vehículo está disponible se
+        // alquila con la fecha actual, que se obtiene
+        // ejecutando los métodos diaHoy(), mesHoy() y
+        // añoHoy(), cuya declaración no se incluye
         if (vehiculo.isDisponible()) {
             vehiculo.setDisponible(false);
             this.listaAlquiler.add(new VehiculoAlquilado(cliente, vehiculo,
@@ -115,6 +115,14 @@ public class EmpresaAlquilerVehiculos {
 
             this.totalAlquileres++;
         }
+    }
+    
+    public void rellenarArrayVehiculo(){
+          for (int i = 0; i < 25; i++) {
+
+               listaVehiculo.add(Vehiculo.generarVehiculoRandom());
+              System.out.println(listaVehiculo.get(i));
+          }
     }
 
     public String getCif() {
