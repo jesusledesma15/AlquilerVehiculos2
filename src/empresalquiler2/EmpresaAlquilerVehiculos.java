@@ -116,23 +116,23 @@ public class EmpresaAlquilerVehiculos {
             this.totalAlquileres++;
         }
     }
-    
-    public void rellenarArrayVehiculo(){
-          for (int i = 0; i < 25; i++) {
 
-               listaVehiculo.add(Vehiculo.generarVehiculoRandom());
-              System.out.println(listaVehiculo.get(i));
-          }
+    public void rellenarArrayVehiculo() {
+        for (int i = 0; i < 25; i++) {
+
+            listaVehiculo.add(Vehiculo.generarVehiculoRandom());
+            System.out.println(listaVehiculo.get(i));
+        }
     }
 
-    public void rellenarArrayCliente(){
-          for (int i = 0; i < 25; i++) {
+    public void rellenarArrayCliente() {
+        for (int i = 0; i < 25; i++) {
 
-               listaCliente.add(Cliente.generarClienteAleatorio());
-              System.out.println(listaCliente.get(i));
-          }
+            listaCliente.add(Cliente.generarClienteAleatorio());
+            System.out.println(listaCliente.get(i));
+        }
     }
-    
+
     //Hacer burbuja para Vehiculos
     public void burbujaVehiculos() {
         int aux;
@@ -146,9 +146,25 @@ public class EmpresaAlquilerVehiculos {
                     listaVehiculo.set(j, temp);
                 }
             }
-         }
+        }
     }
-    
+
+    //Hacer burbuja para Vehiculos
+    public void burbujaCliente() {
+        int aux;
+        Cliente temp;
+        for (int i = 0; i < listaCliente.size() - 1; i++) {
+            for (int j = i + 1; j < listaCliente.size(); j++) {
+                aux = listaCliente.get(i).getNif().compareTo(listaCliente.get(j).getNif());
+                if (aux > 0) {
+                    temp = listaCliente.get(i);
+                    listaCliente.set(i, listaCliente.get(j));
+                    listaCliente.set(j, temp);
+                }
+            }
+        }
+    }
+
     public String getCif() {
         return cif;
     }
