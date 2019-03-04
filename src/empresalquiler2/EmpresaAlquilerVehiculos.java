@@ -125,6 +125,14 @@ public class EmpresaAlquilerVehiculos {
           }
     }
 
+    public void rellenarArrayCliente(){
+          for (int i = 0; i < 25; i++) {
+
+               listaCliente.add(Cliente.generarClienteAleatorio());
+              System.out.println(listaCliente.get(i));
+          }
+    }
+    
     public String getCif() {
         return cif;
     }
